@@ -9,6 +9,4 @@ public class HeroTest {
     }
     private void assertArrayEquals(boolean b, boolean b1) {
     }
-
-
 }
