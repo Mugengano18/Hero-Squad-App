@@ -1,20 +1,18 @@
 {{#partial "content"}}
     <h2>Add a new Hero:</h2>
 
-    <form action="/hero/new" method="post">
+    <form action="/heroes" method="post">
         <div class="from-group">
             <label for="name">Name:</label>
             <input id="name" name="name" type="text" class="form-control">
             <label for="Age">Age:</label>
-            <input id="age" name="Age" type="number" class="form-control" min="18">
+            <input id="age" name="age" type="number" class="form-control" min="18">
             <label for="powers">Spowers:</label>
             <input id="power" name="power" type="text" class="form-control">
             <label for="name">Weaknesses:</label>
             <input id="weakness" name="weakness" type="text" class="form-control">
-        </div>
-        <div class="form-group">
             <label for="squad">Choose a squad:</label>
-            <select class="form-control">
+            <select class="form-control" name="squad">
                 <option>Fantastic Four</option>
                 <option>X-Men</option>
                 <option>Justice Society of America</option>
@@ -24,7 +22,7 @@
                 <option>The Watchmen</option>
             </select><br>
             <a href="/squad"><button type="button" class="btn btn-info">Create a squad</button></a>
-            <button type="button" class="btn btn-info">Done</button>
+            <button type="submit" class="btn btn-info">Done</button>
         </div>
     </form>
 {{/partial}}

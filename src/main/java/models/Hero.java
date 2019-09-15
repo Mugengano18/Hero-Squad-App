@@ -8,14 +8,18 @@ public class Hero {
     private String SpecialPower;
     private String weakness;
     private int heroId;
+    private String league;
     private static ArrayList<Hero>instances =new ArrayList<>();
 
 
-    public Hero(String name,int age,String SpecialPower,String weakness){
+    public Hero(String name){
         this.name=name;
         this.age=age;
         this.weakness=weakness;
         this.SpecialPower=SpecialPower;
+        this.league=league;
+        instances.add(this);
+
         this.heroId=instances.size();
 
 
@@ -45,7 +49,21 @@ public class Hero {
     public void setAge(int age){
         this.age=age;
     }
-    public static ArrayList<Hero>getAll(){
+    public int getHeroId(){return heroId;}
+
+    public void setHeroId(int heroId) {
+        this.heroId = heroId;
+    }
+    public String getLeague(){
+        return league;
+    }
+
+    public void setLeague(String league) {
+        this.league = league;
+    }
+
+    public static ArrayList<Hero>All(){
         return instances;
     }
+    public static Hero findId(int heroId){return instances.get(heroId-1);}
 }
