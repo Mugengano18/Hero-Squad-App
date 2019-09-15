@@ -1,0 +1,15 @@
+{{#partial "content"}}
+    <h2>Make a squad:</h2>
+    <form>
+        <div class="form-group">
+            <label for="name">Squad name:</label>
+            <input type="text" class="form-control" id="Sname" name="name">
+            <label for="length">Minimum Number:</label>
+            <input type="number" class="form-control" id="length" name="number" min="1">
+            <label for="name">Reason to fight:</label>
+            <input type="text" class="form-control" id="fight" name="fight"><br>
+            <button type="submit" class="btn btn-info">Create</button>
+        </div>
+    </form>
+{{/partial}}
+{{>layout.hbs}}
