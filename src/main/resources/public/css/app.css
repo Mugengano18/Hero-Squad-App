@@ -52,5 +52,35 @@ margin-left:70px;
 }
 #form1 button{
 font-family: 'Chilanka', cursive;
-font-size:25px;
+font-size:15px;
+}
+#form2 input{
+font-family: 'Chilanka', cursive;
+width:700px;
+margin-left:70px;
+}
+#form2 label{
+font-family: 'Chilanka', cursive;
+font-size:20px;
+}
+#squadt{
+font-size:60px;
+font-family: 'Chilanka', cursive;
+}
+#form2 button{
+font-family: 'Chilanka', cursive;
+font-size:15px;
+}
+
+#hlist{
+font-size:40px;
+font-family: 'Chilanka', cursive;
+}
+#name1{
+font-size:30px;
+font-family: 'Quicksand', sans-serif;
+}
+#hero3{
+font-size:15px;
+font-family: 'Chilanka', cursive;
 }
