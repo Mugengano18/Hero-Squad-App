@@ -66,4 +66,8 @@ public class Hero {
         return instances;
     }
     public static Hero findId(int heroId){return instances.get(heroId-1);}
+    public void delHero(){
+        instances.remove(heroId-1);
+
+    }
 }

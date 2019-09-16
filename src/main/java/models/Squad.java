@@ -7,43 +7,63 @@ public class Squad {
     private int maxsize;
     private String reason;
     private int squadId;
-    private static ArrayList<Squad> instances =new ArrayList<>();
+    private static ArrayList<Squad>instances =new ArrayList<>();
 
-
-    public Squad(String Sname,String reason){
-        this.Sname=Sname;
+    public Squad(String sname, int maxsize, String reason) {
+        Sname = sname;
+        this.maxsize = maxsize;
+        this.reason = reason;
+        this.squadId = squadId;
         instances.add(this);
-        this.maxsize=maxsize;
-        this.reason=reason;
+
         this.squadId=instances.size();
     }
 
-    public String getSname(){
+    public String getSname() {
         return Sname;
     }
-    public int getMaxsize(){
+
+    public void setSname(String sname) {
+        Sname = sname;
+    }
+
+    public int getMaxsize() {
         return maxsize;
     }
-    public String getReason(){
+
+    public void setMaxsize(int maxsize) {
+        this.maxsize = maxsize;
+    }
+
+    public String getReason() {
         return reason;
     }
 
-    public void setSname(String Sname){
-        this.Sname=Sname;
+    public void setReason(String reason) {
+        this.reason = reason;
     }
-    public void setMaxsize(int maxsize){
-        this.maxsize=maxsize;
+
+    public int getSquadId() {
+        return squadId;
     }
-    public void setReason(String reason){
-        this.reason=reason;
-    }
-    public int getSquadId(){return squadId;}
 
     public void setSquadId(int squadId) {
         this.squadId = squadId;
     }
-    public static ArrayList<Squad>getAll(){
+
+    public static ArrayList<Squad> getInstances() {
         return instances;
     }
-    public static Squad findSquadId(int squadId){return instances.get(squadId-1);}
+
+    public static void setInstances(ArrayList<Squad> instances) {
+        Squad.instances = instances;
+    }
+    public static ArrayList<Squad>All(){
+        return instances;
+    }
+    public static Squad findId(int heroId){return instances.get(heroId-1);}
+    public void delHero(){
+        instances.remove(squadId-1);
+
+    }
 }

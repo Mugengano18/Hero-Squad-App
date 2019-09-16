@@ -1,5 +1,10 @@
 {{#partial "content"}}
-    <p>Your Team Has been created!!!</p>
-    <a href="/Slist">View squad</a>
+        <h3 id="hlist">Squad list:</h3>
+        <ul style="font-size:25px;font-family: 'Chilanka', cursive;Text-decoration:none">
+            <li>{{name}}</li>
+            <li>{{number}}</li>
+            <li>{{fight}}</li>
+        </ul>
+    <a href="/squad"><button type="button" class="btn btn-info">Create a squad</button></a>
 {{/partial}}
 {{>layout.hbs}}

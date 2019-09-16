@@ -29,9 +29,14 @@ public class App {
             String name= request.queryParams("name");
             int Age=Integer.parseInt(request.queryParams("age"));
             String weak= request.queryParams("weakness");
-            String power= request.queryParams("SpecialPower");
-            String league= request.queryParams("league");
+            String power= request.queryParams("power");
+            String league= request.queryParams("squad");
             Hero newHero =new Hero(name,Age,weak,power,league);
+            model.put("squad",newHero.getLeague());
+            model.put("power",newHero.getSpecialPower());
+            System.out.println(newHero.getLeague());
+            System.out.println(newHero.getSpecialPower());
+
             return new ModelAndView(model, "succesHero.hbs");
         }), new HandlebarsTemplateEngine());
 
@@ -54,6 +59,13 @@ public class App {
         }), new HandlebarsTemplateEngine());
 
 
+        get("/hero/:heroId/del",((request, response) -> {
+            Map<String,Object>model=new HashMap<>();
+            int idOfHeToDel=Integer.parseInt(request.params("heroId"));
+            Hero deleteHero=Hero.findId(idOfHeToDel);
+            deleteHero.delHero();
+            return new ModelAndView(model, "Hero-details.hbs");
+        }), new HandlebarsTemplateEngine());
 
         get("/squad",((request, response) -> {
             Map<String,Object>model=new HashMap<>();
@@ -61,25 +73,37 @@ public class App {
         }), new HandlebarsTemplateEngine());
 
         post("/squad",((request, response) -> {
-            Map<String,Object>model=new HashMap<>();
-            String sName=request.queryParams("Sname");
-//            int max=Integer.parseInt(request.params("maxsize"));
-            String reason=request.queryParams("reason");
-            Squad newSquad=new Squad(sName,reason);
+                Map<String,Object>model=new HashMap<>();
+                String Sname= request.queryParams("name");
+                int maxsize=Integer.parseInt(request.queryParams("number"));
+                String reason= request.queryParams("fight");
+            Squad newHero =new Squad(Sname,maxsize,reason);
+            model.put("name",newHero.getSname());
+            model.put("number",newHero.getMaxsize());
+            model.put("fight",newHero.getReason());
             return new ModelAndView(model, "succesSquad.hbs");
         }), new HandlebarsTemplateEngine());
 
         get("/Slist",((request, response) -> {
             Map<String,Object>model=new HashMap<>();
-            ArrayList<Squad> squads =Squad.getAll();
-            model.put("squad1",squads);
+            ArrayList<Squad> squads =Squad.All();
+            model.put("squad",squads);
             return new ModelAndView(model, "Alsquad.hbs");
         }), new HandlebarsTemplateEngine());
+
+
+
+
+
+
+
+
 
         get("/sq/:squadId",((request, response) -> {
             Map<String,Object>model=new HashMap<>();
             int idSquadToFind=Integer.parseInt(request.params("squadId"));
-            Squad findsuad=Squad.findSquadId(idSquadToFind);
+            Squad findsuad=Squad.findId(idSquadToFind);
+
             model.put("suad",findsuad);
             return new ModelAndView(model, "Squad-Details.hbs");
         }), new HandlebarsTemplateEngine());

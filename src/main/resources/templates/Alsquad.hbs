@@ -1,12 +1,9 @@
 {{#partial "content"}}
     <h3 id="hlist">Squad list:</h3>
-    {{#if squad1}}
-        {{#each squad1}}
-            <a href="/sq/{{squadId}}"><p id="name1">{{ sName }}</p></a>
+        {{#each squad}}
+            <a href="/sq/{{squadId}}"><p id="name1"> {{name}}</p></a>
         {{/each}}
-    {{else}}
-        <p id="name1">no squads  yet</p>
-    {{/if}}
     <a href="/squad"><button type="button" class="btn btn-info" id="hero3">Create a squad</button></a>
 {{/partial}}
 {{>layout.hbs}}
+
