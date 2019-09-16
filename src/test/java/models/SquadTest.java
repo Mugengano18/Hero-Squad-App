@@ -6,7 +6,7 @@ public class SquadTest {
 
     @Test
     public void newSquad() throws Exception{
-        Squad squad =new Squad("Avengers",22,"world Protection");
+        Squad squad =new Squad("Avengers");
         assertArrayEquals(true, squad instanceof Squad);
     }
 

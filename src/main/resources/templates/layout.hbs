@@ -8,16 +8,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{#block "title"}}Hero Squad App{{/block}}</title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Chilanka&display=swap" rel="stylesheet">
 
 </head>
 {{/block}}
 <body>
 <ul class="nav nav-tabs">
-    <li role="presentation" class="active"><a href="/">Home</a></li>
-    <li role="presentation"><a href="/Hlist"> All heros</a></li>
-    <li role="presentation"><a href="/Slist">All Squads</a></li>
+    <li role="presentation" class="active"class="nav"><a href="/">Home</a></li>
+    <li role="presentation" class="nav"><a href="/Hlist"> All heros</a></li>
+    <li role="presentation" class="nav"><a href="/Slist">All Squads</a></li>
 </ul>
-<div class="container">
+<div class="container-fluid">
     <div class="card">
     {{#block "content"}}
 
@@ -26,7 +28,7 @@
 </div>
 {{#block "footer"}}
     <footer>
-        <div class="container">
+        <div class="container-fluid">
             <p>Copyright &copy; All Rights Reserved Hero Squad</p>
         </div>
     </footer>

@@ -7,15 +7,15 @@ public class Squad {
     private int maxsize;
     private String reason;
     private int squadId;
-    private static ArrayList<Squad> sInstances =new ArrayList<>();
+    private static ArrayList<Squad> instances =new ArrayList<>();
 
 
-    public Squad(String sname,int maxsize,String reason){
+    public Squad(String Sname,String reason){
         this.Sname=Sname;
+        instances.add(this);
         this.maxsize=maxsize;
         this.reason=reason;
-        sInstances.add(this);
-        this.squadId=sInstances.size();
+        this.squadId=instances.size();
     }
 
     public String getSname(){
@@ -37,13 +37,13 @@ public class Squad {
     public void setReason(String reason){
         this.reason=reason;
     }
-    public int getHeroId(){return squadId;}
+    public int getSquadId(){return squadId;}
 
-    public void setHeroId(int squadId) {
+    public void setSquadId(int squadId) {
         this.squadId = squadId;
     }
     public static ArrayList<Squad>getAll(){
-        return sInstances;
+        return instances;
     }
-    public static Squad findHeroId(int squadId){return sInstances.get(squadId-1);}
+    public static Squad findSquadId(int squadId){return instances.get(squadId-1);}
 }

@@ -1,0 +1,56 @@
+body{
+background-image:url(../images/image1.jpg);
+background-size:cover;
+text-align:center;
+background-repeat:no-repeat;
+height:900px;
+color:white
+
+
+}
+.nav nav-tabs li{
+font-size:100px;
+}
+.nav{
+font-size:25px;
+font-family: 'Chilanka', cursive;
+}
+#welcome{
+font-size:60px;
+margin-top:130px;
+font-family: 'Chilanka', cursive;
+}
+#welcome1{
+font-size:60px;
+font-family: 'Chilanka', cursive;
+}
+#hero1,#hero2{
+font-size:25px;
+font-family: 'Chilanka', cursive;
+}
+footer p{
+font-size:10px;
+position:relative;
+top:500px;
+}
+#heronew{
+font-size:60px;
+font-family: 'Chilanka', cursive;
+}
+#form1 label{
+font-family: 'Chilanka', cursive;
+font-size:20px;
+}
+#form1 input{
+font-family: 'Chilanka', cursive;
+width:700px;
+margin-left:70px;
+}
+#form1 select{
+width:700px;
+margin-left:70px;
+}
+#form1 button{
+font-family: 'Chilanka', cursive;
+font-size:25px;
+}
