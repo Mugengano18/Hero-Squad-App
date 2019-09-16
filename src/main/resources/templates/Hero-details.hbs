@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link href="https://fonts.googleapis.com/css?family=Chilanka&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+</head>
+<body>
+<div style="background-image: url(https://wallpapercave.com/wp/HGMtO8W.jpg);height:1000px;background-repeat:no-repeat;background-size:cover;color:white;">
+<ul class="nav nav-tabs"style="font-size:25px;font-family: 'Chilanka', cursive">
+    <li role="presentation" class="active"class="nav"><a href="/">Home</a></li>
+    <li role="presentation" class="nav"><a href="/Hlist"> All heros</a></li>
+    <li role="presentation" class="nav"><a href="/Slist">All Squads</a></li>
+</ul>
+<div class="container">
+        <p style="font-size:30px; text-align: center;font-family: 'Chilanka', cursive">information:</p>
+        <ul class="details" style="font-family: 'Chilanka', cursive;font-size:15px">
+            <li>name:{{hero.name}}</li>
+            <li>Hero age:{{hero.age}}</li>
+            <li>Powers:{{hero.power}}</li>
+            <li>Weaknesses:{{hero.weakness}}</li>
+            <li>Super Hero League:{{hero.squad}}</li>
+        </ul>
+        <a href="/hero/{{hero.heroId}}/del">delete the hero</a>
+    </div>
+</div>
+</body>
+</html>

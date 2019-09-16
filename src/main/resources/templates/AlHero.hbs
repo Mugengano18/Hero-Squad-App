@@ -1,0 +1,12 @@
+{{#partial "content"}}
+    <h3 id="hlist">Hero list:</h3>
+    {{#if heroes}}
+        {{#each heroes}}
+            <a href="/hero/{{heroId}}"><p id="name1">{{ name }}</p></a>
+        {{/each}}
+    {{else}}
+        <p id="name1">no heroes yet</p>
+    {{/if}}
+    <a href="/heroes"><button type="button" class="btn btn-info" id="hero3">Create a hero</button></a>
+{{/partial}}
+{{>layout.hbs}}

@@ -1,0 +1,9 @@
+{{#partial "content"}}
+    <h3 id="hlist">Squad list:</h3>
+        {{#each squad}}
+            <a href="/sq/{{squadId}}"><p id="name1"> {{name}}</p></a>
+        {{/each}}
+    <a href="/squad"><button type="button" class="btn btn-info" id="hero3">Create a squad</button></a>
+{{/partial}}
+{{>layout.hbs}}
+
