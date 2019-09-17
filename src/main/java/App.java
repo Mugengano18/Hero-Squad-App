@@ -72,7 +72,7 @@ public class App {
             return new ModelAndView(model, "Squad.hbs");
         }), new HandlebarsTemplateEngine());
 
-        post("/squad",((request, response) -> {
+        post("/squad2",((request, response) -> {
                 Map<String,Object>model=new HashMap<>();
                 String Sname= request.queryParams("name");
                 int maxsize=Integer.parseInt(request.queryParams("number"));
