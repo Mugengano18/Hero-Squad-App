@@ -22,11 +22,12 @@
         <ul class="details" style="font-family: 'Chilanka', cursive;font-size:15px">
             <li>name:{{hero.name}}</li>
             <li>Hero age:{{hero.age}}</li>
-            <li>Powers:{{power}}</li>
+            <li>Powers:{{heroe.power}}</li>
             <li>Weaknesses:{{hero.weakness}}</li>
-            <li>Super Hero League:{{squad}}</li>
+            <li>Super Hero League:{{heroe.squad}}</li>
         </ul>
-        <a href="/hero/{{hero.heroId}}/del">delete the hero</a>
+    <a href="/hero/{{hero.heroId}}/del"><button type="button" class="btn btn-info">delete the hero</button></a>
+    <a href="/hero/{{hero.heroId}}/update"><button type="button"class="btn btn-info">edit</button> </a>
     </div>
 </div>
 </body>
