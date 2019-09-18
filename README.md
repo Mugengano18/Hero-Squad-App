@@ -4,7 +4,7 @@ and this app help the children to be creative and be able to increase there imag
 
 ## here is my project entry
 
-<img src="images/image2.png">
+<img src="public/images/image2.png">
 
 
 ## Behavior driven development
@@ -22,6 +22,6 @@ and this app help the children to be creative and be able to increase there imag
 - Spark framework
 - Handlebars
 
-## Copyrights
+## Copyrights && Permissions
 
 - Copyrights &copy; ALL RIGHTS RESERVED Hero-squad-app
