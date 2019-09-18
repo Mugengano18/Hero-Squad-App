@@ -4,7 +4,7 @@ and this app help the children to be creative and be able to increase there imag
 
 ## here is my project entry
 
-<img src="public/images/image2.png">
+<img src="image/image2.png">
 
 
 ## Behavior driven development
@@ -15,6 +15,12 @@ and this app help the children to be creative and be able to increase there imag
 - We should also include a gitignore file
 - And finally deploy it  to heroku
 
+## Contacts
+- Email:mugengano@gmail.com
+- Tel nbr:0787831940
+
+## Author
+- Mugengano Alice
 
 ## Techonologies used in the project
 
